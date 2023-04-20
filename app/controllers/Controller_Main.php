@@ -1,10 +1,16 @@
 <?php
 
 class Controller_Main extends Controller {
-    function action_index()
-	{	
-		//передаем стандартную сраницу темплейт и главную индекс
-		//темплейт это хедер и футер сайта
-		$this->view->generate('main_view.php', 'template_view.php');
+
+	function __construct()
+	{
+		$this->model = new Model_Main();
+		$this->view = new View();
+	}
+	
+	function action_index()
+	{
+		$data = $this->model->get_data();		
+		$this->view->generate('main_view.php', 'template_view.php', $data);
 	}
 }

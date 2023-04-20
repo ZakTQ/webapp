@@ -9,7 +9,7 @@ class Database
     {
     }
 
-    protected static function getInstance()
+    public static function getInstance()
     {
         if (empty(self::$instance)) {
             $db_info = array(
@@ -26,6 +26,8 @@ class Database
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
                 self::$instance->query('SET NAMES utf8');
                 self::$instance->query('SET CHARACTER SET utf8');
+
+                echo "db connect";
             } catch (PDOException $e) {
                 echo     $e->getMessage();
             }

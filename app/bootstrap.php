@@ -1,7 +1,6 @@
 <?php
 
-include_once('core/DebugConsole.php');
-include_once ('core/DataBase.php');
+include_once('core/DataBase.php');
 
 require_once 'core/Model.php';
 require_once 'core/View.php';

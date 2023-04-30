@@ -13,14 +13,14 @@ class Loginup
             $sql = ("SELECT `login` FROM `users` WHERE `login` = '$login ' AND `password` = '$password'");
             $stm = $db->query($sql);
             $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
             if (!$stm->rowCount()) {
-                foreach ($result as $row) {
-                    $_SESSION['name'] = $row['login'];
-                }
-                
+               echo $stm;
             } else {
                 echo "login accepted";
             }
+
+            return $result;
         } catch (Exception $e) {
             print $e->getMessage();
         }

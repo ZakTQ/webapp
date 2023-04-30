@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['user'])){
+    echo $_SESSION['user'];
+}
 echo $_SESSION['user'];
 ?>
 
@@ -16,14 +19,6 @@ echo $_SESSION['user'];
 
 <body>
     <div class="container">
-        <pre>
-        <?php
-
-        var_dump($result);
-        ?>
-
-        </pre>
-
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">Logo</a>

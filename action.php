@@ -15,4 +15,7 @@ if (isset($_POST['password'])) {
 $select = new Loginup();
 $result = $select->get_data($login, $password);
 
+
+$_SESSION['name'] = $result['name'];
+
 header('Location: /');

@@ -1,13 +1,22 @@
 .card {
     margin: 10px;
 }
-.admin__form{
-    width: 50%;
-}
 .product__cut{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
     background-color: rgb(215, 215, 215);
+}
+.nav-link:focus-visible {
+    outline: 0;
+    box-shadow: none;
+}
+/* регистрация форма 50% */
+.MyFormReg{
+    width: 50%;
+    margin: 0 auto;
+}
+.carousel-item{
+    height: 400px;
 }

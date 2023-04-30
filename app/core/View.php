@@ -13,7 +13,7 @@ class View
 		}
 		
 		
-		include 'app/views/'.$template_view;
+		include 'app/views/default/'.$template_view;
 	}
 }
 
